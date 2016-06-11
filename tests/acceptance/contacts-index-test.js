@@ -5,6 +5,12 @@ moduleForAcceptance('Acceptance | contacts index');
 
 test('visiting user contacts route displays all contacts', function(assert) {
   // Set up the test data
+  server.create('contacts',{name: 'foo'});
+  server.create('contacts',{name: 'bar'});
+  server.create('contacts',{name: 'baz'});
+  server.create('contacts',{name: 'bang'});
+  server.create('contacts',{name: 'boop'});
+
 
   visit('/contacts');
 
@@ -14,7 +20,9 @@ test('visiting user contacts route displays all contacts', function(assert) {
 });
 
 test('user contacts list is sorted by name', function(assert) {
-  // Set up the test data
+  server.create('contacts',{name:'Jane Doe'});
+  server.create('contacts',{name: 'John Armstrong'});
+  server.create('contacts',{name: 'John Doe'});
 
   visit('/contacts');
 
@@ -26,7 +34,11 @@ test('user contacts list is sorted by name', function(assert) {
 });
 
 test('displays info for a contact in each row', function(assert) {
-  // Set up the test data
+  var contact = {
+    name: "Ann Smith",
+    email: [{value:'smith@example.com', tags:'primary'},{value:'asmith@foo.com'},{value:'anns@short.com'}],
+    phone: [{value:'+1 555-555-5252',tags:'primary'},{value:'+1 (555)-555-1212'},{value:'555.555.1234'}]
+  }
 
   visit('/contacts');
 

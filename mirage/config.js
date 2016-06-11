@@ -32,4 +32,7 @@ export default function() {
   this.get('/folders');
   this.get('/folders/:id');
 
+  this.get('/contacts');
+  this.get('/contacts/:id');
+
   this.post('/emails');}

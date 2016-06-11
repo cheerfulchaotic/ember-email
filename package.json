@@ -43,6 +43,7 @@
     "ember-moment": "7.0.0-beta.3",
     "ember-paper": "0.2.14",
     "ember-resolver": "^2.0.3",
-    "loader.js": "^4.0.1"
+    "loader.js": "^4.0.1",
+    "qunit": "0.9.1"
   }
 }

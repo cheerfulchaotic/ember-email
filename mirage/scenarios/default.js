@@ -18,4 +18,6 @@ export default function(server) {
 
   let spam = server.create('folder', { name: 'Spam', userId: 1, emailCount: 32, unreadCount: 13 });
   let spamEmails = server.createList('email', 32, { folderId: spam.id });
+
+  let contacts = server.createList('contact',5);
 }
