@@ -1,5 +1,5 @@
 {{#each sortedContacts as |contact|}}
-  <li class="test-contact"><span class="test-contact-name">{{contact.name}}</span> <span class="test-contact-primary-email">{{primary-listing }}</span> <span class="test-contact-primary-phone">{{primary-listing }}</span></li>
+  <li class="test-contact"><span class="test-contact-name">{{contact.name}}</span> <span class="test-contact-primary-email">{{format-address contact.address 'email'}}</span> <span class="test-contact-primary-phone">{{format-address contact.address 'phone'}}</span></li>
 {{/each}}
 
 {{yield}}

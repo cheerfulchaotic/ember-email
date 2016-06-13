@@ -20,4 +20,9 @@ export default function(server) {
   let spamEmails = server.createList('email', 32, { folderId: spam.id });
 
   let contacts = server.createList('contact',5);
+
+  contacts.forEach(function(ele, ind, arr){
+    var addresses = server.createList('address',3);
+    ele.address = addresses;
+  });
 }

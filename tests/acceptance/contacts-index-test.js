@@ -34,11 +34,7 @@ test('user contacts list is sorted by name', function(assert) {
 });
 
 test('displays info for a contact in each row', function(assert) {
-  var contact = {
-    name: "Ann Smith",
-    email: [{value:'smith@example.com', tags:'primary'},{value:'asmith@foo.com'},{value:'anns@short.com'}],
-    phone: [{value:'+1 555-555-5252',tags:'primary'},{value:'+1 (555)-555-1212'},{value:'555.555.1234'}]
-  }
+  var contact = server.create('contacts',{name:'Ann Smith',primaryEmail:'smith@example.com',primaryPhone:'+1 555-555-5252'});
 
   visit('/contacts');
 

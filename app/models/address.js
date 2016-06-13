@@ -1,10 +1,9 @@
 import Model from 'ember-data/model';
 import attr from 'ember-data/attr';
-import { belongsTo } from 'ember-data/relationships';
+// import { belongsTo, hasMany } from 'ember-data/relationships';
 
 export default Model.extend({
   value: attr('string'),
   type: attr('string'),
-  tags: attr('string'),
-  contact: belongsTo('contact')
+  is_primary: attr('boolean')
 });

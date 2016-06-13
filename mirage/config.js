@@ -34,5 +34,7 @@ export default function() {
 
   this.get('/contacts');
   this.get('/contacts/:id');
+  this.get('/addresses/');
+  this.get('/addresses/:id');
 
   this.post('/emails');}
